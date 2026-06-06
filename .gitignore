@@ -1,0 +1,8 @@
+.env
+secrets
+logs
+sql
+scripts/__pycache__
+plugins
+dags/__pycache__
+data
