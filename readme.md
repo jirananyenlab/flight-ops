@@ -62,9 +62,13 @@ The Bronze layer stores raw flight data retrieved directly from the OpenSky API 
 
 Responsibilities:
 
-* Extract flight data from OpenSky API
+* Extract flight data from the OpenSky API
+* Load raw JSON data into the Bronze layer
 * Store raw datasets for traceability and reprocessing
 
+Output:
+
+Raw flight datasets stored as timestamped JSON files
 ---
 
 ### Silver Layer
@@ -129,7 +133,7 @@ Features:
 
 ## Snowflake Data Warehouse
 
-The Gold layer output is loaded into Snowflake for reporting and analytical purposes.
+Aggregated datasets from the Gold layer are loaded into Snowflake for reporting and analytical purposes.
 
 Example table:
 
@@ -173,7 +177,7 @@ project/
 
 ## Key Learning Outcomes
 
-* Building ETL pipelines using Python
+* Building ELT pipelines using Python
 * Implementing Medallion Architecture
 * Workflow orchestration with Apache Airflow
 * Data warehousing with Snowflake
